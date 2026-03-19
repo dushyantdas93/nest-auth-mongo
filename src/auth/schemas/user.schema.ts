@@ -11,7 +11,7 @@ export class User {
   @Prop({ required: true, unique: true })
   email: string;
 
-@Prop({ type: [{ type: Types.ObjectId, ref: 'Role' }] })
+  @Prop({ type: [{ type: Types.ObjectId, ref: 'Role' }] })
   roles: Types.ObjectId[];
 
   @Prop({ required: true })

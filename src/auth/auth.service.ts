@@ -34,7 +34,7 @@ export class AuthService {
   async assignRole(dto: assignRoleDto) {
   return this.userModel.findByIdAndUpdate(
     dto.userId,
-    { $addToSet: { roles: dto.userId } },
+    { $addToSet: { roles: dto.roleId } },
     { new: true },
   );
 }
